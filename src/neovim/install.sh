@@ -40,7 +40,11 @@ VERSION=${VERSION:-stable}
 
 echo "Downloading source for ${VERSION}..."
 
-curl -sL https://github.com/neovim/neovim/releases/download/${VERSION}/nvim-linux-x86_64.tar.gz | tar -xzC /usr/local 2>&1
+curl -L https://github.com/neovim/neovim/releases/download/${VERSION}/nvim-linux-x86_64.tar.gz -o /tmp/nvim-linux-x86_64.tar.gz
+
+echo "Extracting..."
+
+tar -C /usr/local -xzf /tmp/nvim-linux-x86_64.tar.gz
 
 echo "Installing..."
 
@@ -54,4 +58,6 @@ source ~/.profile
 
 # Xác minh cài đặt
 nvim -v
+
+rm /tmp/nvim-linux-x86_64.tar.gz
 
