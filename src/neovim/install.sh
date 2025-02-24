@@ -8,7 +8,9 @@ install_debian_dependencies() {
   rm -rf /var/lib/apt/lists/*
 }
 
-echo "Activating feature 'neovim'"
+VERSION=${VERSION:-stable}
+
+echo "Activating feature 'neovim' ${VERSION}"
 
 if [ "$(id -u)" -ne 0 ]; then
   echo -e 'Script must be run as root. Use sudo, su, or add "USER root" to your Dockerfile before running this script.'
@@ -35,8 +37,6 @@ case "${ADJUSTED_ID}" in
   install_debian_dependencies
   ;;
 esac
-
-VERSION=${VERSION:-stable}
 
 echo "Downloading source for ${VERSION}..."
 
