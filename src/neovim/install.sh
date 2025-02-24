@@ -8,9 +8,9 @@ install_debian_dependencies() {
   rm -rf /var/lib/apt/lists/*
 }
 
-VERSION=${VERSION:-stable}
+NVIM_VERSION=${VERSION:-stable}
 
-echo "Activating feature 'neovim' ${VERSION}"
+echo "Activating feature 'neovim' ${NVIM_VERSION}"
 
 if [ "$(id -u)" -ne 0 ]; then
   echo -e 'Script must be run as root. Use sudo, su, or add "USER root" to your Dockerfile before running this script.'
@@ -38,9 +38,9 @@ case "${ADJUSTED_ID}" in
   ;;
 esac
 
-echo "Downloading source for ${VERSION}..."
+echo "Downloading source for ${NVIM_VERSION}..."
 
-curl -o /tmp/nvim-linux-x86_64.tar.gz -L "https://github.com/neovim/neovim/releases/download/${VERSION}/nvim-linux-x86_64.tar.gz"
+curl -o /tmp/nvim-linux-x86_64.tar.gz -L "https://github.com/neovim/neovim/releases/download/${NVIM_VERSION}/nvim-linux-x86_64.tar.gz"
 
 echo "Extracting..."
 
