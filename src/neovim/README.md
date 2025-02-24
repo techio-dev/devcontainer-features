@@ -1,14 +1,14 @@
 
-# Hello, World! (hello)
+# NeoVim (neovim)
 
-A hello world feature
+Install Neovim with Download release tar.gz file
 
 ## Example Usage
 
 ```json
 "features": {
-    "ghcr.io/devcontainers/feature-starter/hello:1": {
-        "version": "latest"
+    "ghcr.io/techio-dev/devcontainer-features/neovim:1": {
+        "version": "stable"
     }
 }
 ```
@@ -17,9 +17,12 @@ A hello world feature
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| greeting | Select a pre-made greeting, or enter your own | string | hey |
+| version | select neovim version | string | stable |
 
-
+- stable
+- nightly
+- v0.10.4
+- v0.9.5
 
 ---
 
