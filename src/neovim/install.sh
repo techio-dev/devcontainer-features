@@ -53,9 +53,6 @@ if ! grep -q 'export PATH=$PATH:/usr/local/nvim-linux-x86_64/bin' ~/.profile; th
   echo 'export PATH=$PATH:/usr/local/nvim-linux-x86_64/bin' >>~/.profile
 fi
 
-# Nguồn lại profile để áp dụng thay đổi
-source ~/.profile
-
 # Xác minh cài đặt
 nvim -v
 
