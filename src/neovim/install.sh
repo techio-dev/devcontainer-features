@@ -54,6 +54,6 @@ if ! grep -q 'export PATH=$PATH:/usr/local/nvim-linux-x86_64/bin' ~/.profile; th
 fi
 
 # Xác minh cài đặt
-nvim -v
+/usr/local/nvim-linux-x86_64/bin/nvim --headless +PlugInstall +qall
 
 rm /tmp/nvim-linux-x86_64.tar.gz
