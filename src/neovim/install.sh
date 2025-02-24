@@ -40,7 +40,7 @@ esac
 
 echo "Downloading source for ${VERSION}..."
 
-curl -L https://github.com/neovim/neovim/releases/download/${VERSION}/nvim-linux-x86_64.tar.gz -o /tmp/nvim-linux-x86_64.tar.gz
+curl -o /tmp/nvim-linux-x86_64.tar.gz -L "https://github.com/neovim/neovim/releases/download/${VERSION}/nvim-linux-x86_64.tar.gz"
 
 echo "Extracting..."
 
@@ -60,4 +60,3 @@ source ~/.profile
 nvim -v
 
 rm /tmp/nvim-linux-x86_64.tar.gz
-
